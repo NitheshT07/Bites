@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-base: #111111;
+  --color-primary-offset: #FDFBF7;
+  --color-accent: #FF5A36;
+  --color-accent-alt: #F5B301;
+  --color-text-light: #F3F4F6;
+  --color-text-dark: #374151;
+
+  --font-heading: "Plus Jakarta Sans", "Syne", sans-serif;
+  --font-body: "Inter", "DM Sans", sans-serif;
+}
+
+@layer base {
+  html, body {
+    @apply antialiased scroll-smooth;
+    font-family: var(--font-body);
+    background-color: var(--color-primary-base);
+    color: var(--color-text-light);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/5 backdrop-blur-md border border-white/10;
+  }
+}
